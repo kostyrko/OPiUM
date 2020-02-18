@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body{
+            margin-top:70px;
+            background:#333;
+            color: #fff;
+        }
+        hr.red{
+            border-top: 1px solid red;
+        }
+        a{
+            color: #fff;
+        }
+        a:hover{
+            color:#fff
+        }
+
+    </style>
+    <title>Dawne miary polskie - Konwerter</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="display-6 text-center mb-3">Konwerter dawnych miar polskich</h1><hr class="red">
+                <h2 class="display-8 text-center mb-3"><a href="https://pl.wikipedia.org/wiki/Miary_staropolskie" target="_blank">Miary staropolskie</a></h2>
+                <h3 class="display-8 text-center mb-3"><a href="https://pl.wikipedia.org/wiki/Miary_staropolskie#rolne_i_drogowe" target="_blank">Rolne i drogowe:</a></h3>
+                <form>
+                    <div class="form-group">
+                        <input 
+                        id="mInput"
+                        type="number" 
+                        class="form-control" 
+                        class="form-control-lg"
+                        placeholder="Wpisz odległość w metrach...">
+                    </div>
+                </form>
+                <div id="output">
+                    <div class="card bg-secondary mb-2">
+                        <div class="card-block">
+                            <h4>Staje:</h4>
+                            <div id="stajeOutput"></div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-info mb-2">
+                        <div class="card-block">
+                            <h4>Sznury:</h4>
+                            <div id="sznurOutput"></div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-secondary mb-2">
+                        <div class="card-block">
+                            <h4>Laski:</h4>
+                            <div id="laskaOutput"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="card bg-info mb-2">
+                        <div class="card-block">
+                            <h4>Pręty:</h4>
+                            <div id="pretOutput"></div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-secondary mb-2">
+                        <div class="card-block">
+                            <h4>Kroki:</h4>
+                            <div id="krokiOutput"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('output').style.visibility = 'hidden';
+        document.getElementById('mInput').addEventListener('input', function(e){
+            document.getElementById('output').style.visibility = 'visible';
+            let m = e.target.value;
+           document.getElementById('stajeOutput').innerHTML = (m/134).toFixed(2);
+           document.getElementById('sznurOutput').innerHTML = (m/44.665).toFixed(2);
+           document.getElementById('laskaOutput').innerHTML = (m/8.933).toFixed(2);
+           document.getElementById('pretOutput').innerHTML = (m/4.4665).toFixed(2);
+           document.getElementById('krokiOutput').innerHTML = (m/2.2333).toFixed(2);
+        });
+    </script>
+
+</body>
+</html>
