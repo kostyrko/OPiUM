@@ -1,0 +1,14 @@
+body{
+    margin-top:70px;
+    background:#333;
+    color: #fff;
+}
+hr.red{
+    border-top: 1px solid red;
+}
+a{
+    color: #fff;
+}
+a:hover{
+    color:#fff
+}
