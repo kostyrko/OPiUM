@@ -6,5 +6,6 @@ document.getElementById('output').style.visibility = 'hidden';
            document.getElementById('sznurOutput').innerHTML = (m/44.665).toFixed(2);
            document.getElementById('laskaOutput').innerHTML = (m/8.933).toFixed(2);
            document.getElementById('pretOutput').innerHTML = (m/4.4665).toFixed(2);
-           document.getElementById('krokiOutput').innerHTML = (m/2.2333).toFixed(2);
+           document.getElementById('krokiOutput').innerHTML = (m/2.2333).toFixed(3);
+           document.getElementById('lokiecOutput').innerHTML = (m/0.5955).toFixed(3);
         });
