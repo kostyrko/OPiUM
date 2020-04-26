@@ -1,6 +1,6 @@
-document.getElementById('output1').style.visibility = 'hidden';
+document.getElementById('output1').style.display = 'none';
         document.getElementById('rolneInput').addEventListener('input', function(e){
-            document.getElementById('output1').style.visibility = 'visible';
+            document.getElementById('output1').style.display = 'block';
             let m = e.target.value;
            document.getElementById('stajeOutput').innerHTML = (m/134).toFixed(2);
            document.getElementById('sznurOutput').innerHTML = (m/44.665).toFixed(2);
@@ -9,10 +9,9 @@ document.getElementById('output1').style.visibility = 'hidden';
            document.getElementById('krokiOutput').innerHTML = (m/2.2333).toFixed(3);
            document.getElementById('lokiecOutput').innerHTML = (m/0.5955).toFixed(3);
         });
-document.getElementById('output2').style.visibility = 'hidden';
-// future implementation see: https://stackoverflow.com/questions/10693845/what-do-queryselectorall-and-getelementsby-methods-return
+document.getElementById('output2').style.display = 'none';
         document.getElementById('handloweInput').addEventListener('input', function(e){
-            document.getElementById('output2').style.visibility = 'visible';
+            document.getElementById('output2').style.display = 'block';
             let m = e.target.value;
            document.getElementById('sazenOutput').innerHTML = (m/1.787).toFixed(2);
            document.getElementById('lokiecOutput').innerHTML = (m/0.5955).toFixed(2);
